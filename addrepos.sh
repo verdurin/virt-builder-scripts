@@ -44,6 +44,7 @@ enabled=1
 EOF
 
 rpm --import http://emisoft.web.cern.ch/emisoft/dist/EMI/2/RPM-GPG-KEY-emi 
+rpm --import http://repository.egi.eu/sw/production/cas/1/GPG-KEY-EUGridPMA-RPM-3
 
 yum -y install curl dhclient fuse iputils libxslt ntp openssh openssh-server openssh-clients \
 puppet python sysklogd tar vim-enhanced util-linux wget xterm xorg-x11-xauth \
