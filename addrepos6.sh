@@ -1,24 +1,24 @@
 #!/bin/sh
-# Script to add side repos to image and install packages therefrom
+# Script to add side repos to image and install packages therefrom, SL6 EMI3 version
 
 cat <<'EOF' > /etc/yum.repos.d/EMI2-base.repo
 [EMI2-base]
 name=EMI2-base
-baseurl=http://emisoft.web.cern.ch/emisoft/dist/EMI/2/sl5/$basearch/base
+baseurl=http://emisoft.web.cern.ch/emisoft/dist/EMI/3/sl6/$basearch/base
 enabled=1
 EOF
 
 cat <<'EOF' > /etc/yum.repos.d/EMI2-updates.repo
 [EMI2-updates]
 name=EMI2-updates
-baseurl=http://emisoft.web.cern.ch/emisoft/dist/EMI/2/sl5/$basearch/updates
+baseurl=http://emisoft.web.cern.ch/emisoft/dist/EMI/3/sl6/$basearch/updates
 enabled=1
 EOF
 
 cat <<'EOF' > /etc/yum.repos.d/EMI2-third-party.repo
 [EMI2-third-party]
 name=EMI2-third-party
-baseurl=http://emisoft.web.cern.ch/emisoft/dist/EMI/2/sl5/$basearch/third-party
+baseurl=http://emisoft.web.cern.ch/emisoft/dist/EMI/3/sl6/$basearch/third-party
 enabled=1
 EOF
 
@@ -32,7 +32,7 @@ EOF
 cat <<'EOF' > /etc/yum.repos.d/glideinwms-vm.repo
 [glideinWMS-vm]
 name=glideinWMS-vm
-baseurl=http://www.hep.ph.ic.ac.uk/~mhuffman/cloud/glideinwms/el5
+baseurl=http://www.hep.ph.ic.ac.uk/~mhuffman/cloud/glideinwms/el6
 gpgcheck=0
 enabled=1
 EOF
@@ -44,7 +44,7 @@ baseurl=http://repository.egi.eu/sw/production/cas/1/current/
 enabled=1
 EOF
 
-rpm --import http://emisoft.web.cern.ch/emisoft/dist/EMI/2/RPM-GPG-KEY-emi 
+rpm --import http://emisoft.web.cern.ch/emisoft/dist/EMI/3/RPM-GPG-KEY-emi 
 rpm --import http://repository.egi.eu/sw/production/cas/1/GPG-KEY-EUGridPMA-RPM-3
 rpm --import http://cvmrepo.web.cern.ch/cvmrepo/yum/RPM-GPG-KEY-CernVM
 
